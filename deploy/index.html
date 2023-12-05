@@ -1,0 +1,2491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+        <title>Noemi lux Herennius</title>
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+        </style>
+    </head>
+    <body>
+        <!-- The whole main page -->
+        <div id="background-frame">
+            <div id="background-backing"></div>
+            <div id="background-layer-1">
+                <style>
+                    #background-layer-1 {
+                        background-image: url("./images/background_layer1.png");
+                        animation-delay: 0.5s;
+                    }
+                </style>
+            </div>
+            <div id="background-layer-2">
+                <style>
+                    #background-layer-2 {
+                        background-image: url("./images/background_layer2.png");
+                        animation-delay: 0.9s;
+                    }
+                </style>
+            </div>
+            <div id="background-layer-3">
+                <style>
+                    #background-layer-3 {
+                        background-image: url("./images/background_layer3.png");
+                        animation-delay: 1.25s;
+                    }
+                </style>
+            </div>
+            <div class="background-click" id="background-click-1" onclick="playAudioZenos()"></div>
+            <div class="background-click" id="background-click-2" onclick="playAudioAulus()"></div>
+            <div class="background-click" id="background-click-3" onclick="playAudioNoemi()"></div>
+            <!-- Frame for everything on the "page" contained within the background -->
+            <div id="page-frame">
+                <!-- The Navigation pane on the left side -->
+                <div id="navigate">
+                    <style>
+                        img { max-height: 100%; }
+                    </style>
+                    <img src="./images/button_frame.png">
+                    <div id="name-frame">
+                        <p class="style1" id="name1">Noemi</p>
+                        <div id="garlemald"></div>
+                        <p class="style2" id="name-title">lux</p>
+                        <p class="style1" id="name2">Herennius</p>
+                    </div>
+                    <div id="snake-panel">
+                        <div id="snake"></div>
+                        <div class="style1" id="twelfth">XII</div>
+                    </div>
+                    <div id="button-panel";>
+                        <div class="button" id="button1" onmouseenter="hoverAudio1()" onclick="executeButton(1)">Record</div>
+                        <div class="button" id="button2" onmouseenter="hoverAudio2()" onclick="executeButton(2)">Personnel</div>
+                        <div class="button" id="button3" onmouseenter="hoverAudio3()" onclick="executeButton(3)">Projects</div>
+                        <div class="button" id="button4" onmouseenter="hoverAudio4()" onclick="executeButton(4)">Reference</div>
+                        <div class="button" id="button5" onmouseenter="hoverAudio5()" onclick="executeButton(5)">Documentation</div>
+                        <div id="button-cover"></div>
+                    </div>
+                </div>
+                <!-- The Investigate pane on the right side -->
+                <div id="investigate">
+                    <div class="frame-static">
+                        <img src="./images/frame_l.png">
+                    </div>
+                    <div class="frame-fill"></div>
+                    <div class="frame-static">
+                        <img src="./images/frame_m.png">
+                    </div>
+                    <div class="frame-fill"></div>
+                    <div class="frame-static">
+                        <img src="./images/frame_r.png">
+                    </div>
+                    <!-- RECORD -->
+                    <div class="info-frame" id="page-record">
+                        <div class="file-header">
+                            <div class="file-portrait">
+                                <img src="./images/portrait_noe.png">
+                            </div>
+                            <div class="generic-list">
+                                <div class="text-field-c">
+                                    <p class="style1">PERSONNEL FILE</p>
+                                </div>
+                                <div class="generic-container">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">NAME</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">Herennius, Noemi</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">RANK</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">Lux</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">TITLE</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">Sciscitator Princeps</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">LEGION</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">XII</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">CITIZEN</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">Yes</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">SEX</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">Female</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">RACE</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">Garlean Pureblood</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">AGE</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">27</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">HEIGHT</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">6 fm</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">WEIGHT</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">157 pz</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">HAIR</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">White</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="text-field-r">
+                                                    <span class="style3">EYES</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="text-field-para">
+                                                    <span class="style4">Green</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="generic-container">
+                            <hr class="divider-l">
+                            <img class="divider-img" src="./images/garlemald_divider.png">
+                            <hr class="divider-r">
+                        </div>
+                        <div class="scrollbar-box" id="noe-profile-scroll" onscroll='changeuPos(noeScroll);'>
+                            <div class="text-field-c">
+                                <p class="style1">CIVIC INFORMATION</p>
+                            </div>
+                            <div class="generic-container">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">MARRIED</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Yes</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">MAIDEN NAME</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Marinus</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">SPOUSE NAME</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Herennius, Caeso</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">SPOUSE RANK</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Quo</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">SPOUSE TITLE</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Aquilifer</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">SPOUSE LEGION</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">XII</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">SPOUSE CITIZEN</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Yes</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">CHILDREN</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">No</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="text-field-c"><p class="style4"></p></div>
+                            <div class="text-field-c">
+                                <p class="style1">SERVICE RECORD</p>
+                            </div>
+                            <div class="generic-container">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ORIGIN</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Northwestern Yanxia</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">CIRCUMSTANCE</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Voluntary</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">LANGUAGE PROFICIENCIES</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Hingan (Fluent)<br>
+                                                    Common (Fluent)<br>
+                                                    Garlean (Written)
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ACADEMY EDUCATION</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">None</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ACCREDITATION</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Basic Weapons Familiarization: Katana, Gunblade<br>
+                                                    Basic First Aid<br>
+                                                    Void Theory<br>
+                                                    Laboratorium Safety & Procedures<br>
+                                                    Genealogy<br>
+                                                    Aetherology
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">DIVISION</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Dicasterium de Progression Magiteci et Aetherologia, Segmentum Orientale</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">POST</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Laboratorium Aetherologicum, Kugane Consulate</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PRIOR LEGIONS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">No</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PRIOR POSTS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Castrum Fluminis<br>
+                                                    Doma Castle
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">YEARS SERVED</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">11</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">DISCIPLINARY MARKS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">3</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">YEARS SINCE LAST MARK</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">9</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">COMMENDATIONS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">No</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">DEPLOYMENT THEATERS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Garlemald, Ilsabard<br>
+                                                    Ghimlyt, Aldenard<br>
+                                                    Gridania, Aldenard<br>
+                                                    Gyr Abania, Aldenard<br>
+                                                    Yanxia, Othard
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PERSONNEL -->
+                    <div class="info-frame" id="page-personnel">
+                        <div class="scrollbar-box" id="personnel-scroll" onscroll='changeuPos(perScroll);'>
+                            <table>
+                                <tr>
+                                    <th colspan="5" scope="colgroup">
+                                        <div class="text-field-c">
+                                            <p class="style1">LABORATORIUM STAFF</p>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <!-- Glaucus Corvinus -->
+                                <tr>
+                                    <th rowspan="8" scope="rowgroup">
+                                        <div class="file-portrait-b">
+                                            <img src="./images/portrait_kir.png">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">NAME</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Corvinus, Glaucus</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RACE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Elezen</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RANK</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Kir</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">AGE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">31</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">TITLE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Architectus Veteranus</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">6 fm 8 im</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">LEGION</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">XII</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">WEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">199 pz</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">CITIZEN</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Yes</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HAIR</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Gray</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">SEX</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Male</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">EYES</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Blue</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="colgroup">
+                                        <div class="generic-container">
+                                            <hr class="divider-l">
+                                            <img class="divider-img" src="./images/garlemald_divider.png">
+                                            <hr class="divider-r">
+                                        </div>
+                                    </th>
+                                </tr>
+                                <!-- Cassius Flavius -->
+                                <tr>
+                                    <th rowspan="8" scope="rowgroup">
+                                        <div class="file-portrait-b">
+                                            <img src="./images/portrait_jen.png">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">NAME</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Flavius, Cassius</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RACE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Hyur</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RANK</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Jen</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">AGE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">23</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">TITLE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Architectus</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">5 fm 8 im</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">LEGION</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">XII</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">WEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">139 pz</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">CITIZEN</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Yes</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HAIR</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Brown</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">SEX</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Male</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">EYES</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Green</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="colgroup">
+                                        <div class="generic-container">
+                                            <hr class="divider-l">
+                                            <img class="divider-img" src="./images/garlemald_divider.png">
+                                            <hr class="divider-r">
+                                        </div>
+                                    </th>
+                                </tr>
+                                <!-- Renn Nemoralis -->
+                                <tr>
+                                    <th rowspan="8" scope="rowgroup">
+                                        <div class="file-portrait-b">
+                                            <img src="./images/portrait_renn.png">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">NAME</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Nemoralis, Renn</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RACE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Miqo'te</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RANK</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Jen</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">AGE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">21</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">TITLE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Medica Alba</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">5 fm 1 im</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">LEGION</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">XII</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">WEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">107 pz</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">CITIZEN</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">No</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HAIR</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Silver</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">SEX</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Female</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">EYES</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Blue</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Tenebrae -->
+                                <tr>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="colgroup">
+                                        <div class="text-field-c"><p class="style1"></p></div>
+                                        <div class="text-field-c">
+                                            <span class="style1">ACQUISITIONS TEAM</span>
+                                        </div>
+                                        <div class="text-field-c">
+                                            <p class="style1">"TENEBRAE"</p>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <!-- Iuno Drusus -->
+                                <tr>
+                                    <th rowspan="8" scope="rowgroup">
+                                        <div class="file-portrait-b">
+                                            <img src="./images/portrait_iuno.png">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">NAME</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Drusus, Iuno</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RACE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Garlean-Elezen Halfblood</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RANK</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Pyr</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">AGE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">23</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">TITLE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Decurion</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">6 fm 7 im</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">LEGION</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">XII</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">WEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">220 pz</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">CITIZEN</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Yes</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HAIR</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">White</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">SEX</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Female</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">EYES</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Silver</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="colgroup">
+                                        <div class="generic-container">
+                                            <hr class="divider-l">
+                                            <img class="divider-img" src="./images/garlemald_divider.png">
+                                            <hr class="divider-r">
+                                        </div>
+                                    </th>
+                                </tr>
+                                <!-- Nasrine Fonteia -->
+                                <tr>
+                                    <th rowspan="8" scope="rowgroup">
+                                        <div class="file-portrait-b">
+                                            <img src="./images/portrait_generic.png">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">NAME</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Fonteia, Nasrine</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RACE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Elezen</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RANK</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Eir</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">AGE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">30</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">TITLE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Frumentaria</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">6 fm 3 im</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">LEGION</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">XII</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">WEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">165 pz</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">CITIZEN</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Yes</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HAIR</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">White</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">SEX</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Female</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">EYES</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Red</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="colgroup">
+                                        <div class="generic-container">
+                                            <hr class="divider-l">
+                                            <img class="divider-img" src="./images/garlemald_divider.png">
+                                            <hr class="divider-r">
+                                        </div>
+                                    </th>
+                                </tr>
+                                <!-- Izuna Gallus -->
+                                <tr>
+                                    <th rowspan="8" scope="rowgroup">
+                                        <div class="file-portrait-b">
+                                            <img src="./images/portrait_generic.png">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">NAME</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Gallus, Izuna</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RACE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Garlean-Hyur Halfblood</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RANK</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Eir</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">AGE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">25</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">TITLE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Frumentarius</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">6 fm 2 im</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">LEGION</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">XII</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">WEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">160 pz</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">CITIZEN</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">No</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HAIR</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Black</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">SEX</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Male</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">EYES</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Blue</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="colgroup">
+                                        <div class="generic-container">
+                                            <hr class="divider-l">
+                                            <img class="divider-img" src="./images/garlemald_divider.png">
+                                            <hr class="divider-r">
+                                        </div>
+                                    </th>
+                                </tr>
+                                <!-- Saegyth Harena -->
+                                <tr>
+                                    <th rowspan="8" scope="rowgroup">
+                                        <div class="file-portrait-b">
+                                            <img src="./images/portrait_sae.png">
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">NAME</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Harena, Saegyth</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RACE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Hyur</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">RANK</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Eir</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">AGE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">26</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">TITLE</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Frumentari</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">5 fm 9 im</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">LEGION</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">XII</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">WEIGHT</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">161 pz</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">CITIZEN</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">No</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">HAIR</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Blonde</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">SEX</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Female</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <span class="style3">EYES</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <span class="style4">Blue</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-para"><p class="style4"></p></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- PROJECTS -->
+                    <div class="info-frame" id="page-projects">
+                        <div class="scrollbar-box" id="project-scroll" onscroll="changeuPos(prjScroll)">
+                            <div class="text-field-c">
+                                <p class="style1">CLASSIFIED</p>
+                            </div>
+                            <div class="file-header-d">
+                                <div class="generic-list-b">
+                                    <div class="file-portrait-b">
+                                        <img src="./images/blueprint_medalbus.png">
+                                    </div>
+                                    <div class="generic-container-b" onclick="infoToggle(prjMedAlb, prjMedAlbArrow)">
+                                        <div class="tab-arrow" id="p-ma-tab-arrow"></div>
+                                        <div class="text-field-l-b">
+                                            <span class="style3">DETAILS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PROJECT</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Medicus Albus</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ROLE</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Consultant, Overseer</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">CONTRIBUTION</span>
+                                            </div>
+                                        </td>
+                                        <td>   
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Field experimentation, 
+                                                    operationally-relevant expertise, 
+                                                    baseline aetherological theory, 
+                                                    subject selection
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">STATUS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Late-stage field testing</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="project-info" id="p-ma-tab">
+                                <div class="text-field-para">
+                                    <p class="style4">
+                                        Developed alongside Project Resonant, Project Medicus Albus sought to 
+                                        create a Magitek catalyst which could artificially enhance the abilities 
+                                        of an experienced wielder to levels far beyond their individual capacity 
+                                        by drawing upon and assisting in converting surrounding ambient aether.<br>
+                                        <br>
+                                        Named for the role it primarily wished to emulate, Project Medicus Albus 
+                                        sought to empower a select few conjurers within the Garlean ranks to 
+                                        practice their powers at a level rivaling that of the White Mages of eras 
+                                        past, the practice (as known) presently living on only through the Padjal.<br>
+                                        <br>
+                                        A small handful of these prototype catalysts were produced and distributed, 
+                                        and through guided practice, its wielders began to produce the desired 
+                                        results. However, progress unofficially halted as many key founding 
+                                        personnel came to be lost and scattered throughout the XIIth Legion's defeats.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="generic-container">
+                                <hr class="divider-l">
+                                <img class="divider-img" src="./images/garlemald_divider.png">
+                                <hr class="divider-r">
+                            </div>
+                            <div class="file-header-d">
+                                <div class="generic-list-b">
+                                    <div class="file-portrait-b">
+                                        <img src="./images/blueprint_resonant.png">
+                                    </div>
+                                    <div class="generic-container-b" onclick="infoToggle(prjRes, prjResArrow)">
+                                        <div class="tab-arrow" id="p-res-tab-arrow"></div>
+                                        <div class="text-field-l-b">
+                                            <span class="style3">DETAILS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PROJECT</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Resonant</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ROLE</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Subordinate Researcher</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">CONTRIBUTION</span>
+                                            </div>
+                                        </td>
+                                        <td>   
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Aetherological theory, genome mapping
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">STATUS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Completed, reopened</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="project-info" id="p-res-tab">
+                                <div class="text-field-para">
+                                    <p class="style4">
+                                        The flagship project of Aulus mal Asina, for which he earned the 
+                                        patronage of the Crown Prince himself, sought to overcome the 
+                                        fundamental shortcoming of the Garlean race: their genetic inability 
+                                        to manipulate aether.<br>
+                                        <br>
+                                        Seeking to identify and correct this inhibition, Project Resonant and 
+                                        its offshoot avenues of investigation led to many fantastic advances in 
+                                        the fields of genetics, synthetics, and aetherochemistry, and though 
+                                        tangible results could ultimately be obtained through genetic alteration, 
+                                        those who survived the modifications succumbed to psychosis. While this 
+                                        had its uses for military applications, in terms of the original aim of 
+                                        the project, it was deemed unacceptable.<br>
+                                        <br>
+                                        Success did not come until mal Asina shifted his focus from body to soul, 
+                                        forsaking genetic modification to instead seek to artificially imprint a 
+                                        facsimile of the Echo upon his subjects. Requiring a host template and a 
+                                        considerable score of Hypertuned to act as aether conduits, the process 
+                                        proved unstable, even deadly, until a final breakthrough saw Fordola rem 
+                                        Lupis emerge as the first successfully half-infused agent, with Zenos yae 
+                                        Galvus becoming himself the second success and first full infusion. <br>
+                                        <br>
+                                        While the fruits of the project are undeniably potent and have delivered 
+                                        an outcome surpassing the intent to merely "level the playing field," 
+                                        subordinates of the late mal Asina have reopened the project in the hopes 
+                                        of achieving its original goals: namely, to allow Garleans command of aether 
+                                        by way of genetic modification rather than bypassing the body by augmenting 
+                                        the soul; a process hoped to be far more commonly feasible than the last.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="generic-container">
+                                <hr class="divider-l">
+                                <img class="divider-img" src="./images/garlemald_divider.png">
+                                <hr class="divider-r">
+                            </div>
+                            <div class="file-header-d">
+                                <div class="generic-list-b">
+                                    <div class="file-portrait-b">
+                                        <img src="./images/blueprint_iuno.png">
+                                    </div>
+                                    <div class="generic-container-b" onclick="infoToggle(prjAaa, prjAaaArrow)">
+                                        <div class="tab-arrow" id="p-aaa-tab-arrow"></div>
+                                        <div class="text-field-l-b">
+                                            <span class="style3">DETAILS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PROJECT</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Armis Aucta Aether</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ROLE</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Director, Lead Researcher</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">CONTRIBUTION</span>
+                                            </div>
+                                        </td>
+                                        <td>   
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Aetherological theory, developmental direction, 
+                                                    basic Magitek engineering, subject selection, 
+                                                    oversight of field implementation
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">STATUS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Early-stage field testing</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="project-info" id="p-aaa-tab">
+                                <div class="text-field-para">
+                                    <p class="style4">
+                                        Building upon the concepts explored in Project Medicus Albus, Project Armis 
+                                        Aucta Aether, as the name plainly states, was conceived with the intent to 
+                                        develop aether-augmented arms and armor. Again designed to amplify the natural 
+                                        abilities of the wearer, this project also incorporated devices capable of 
+                                        not only siphoning and transforming aether, but also condensing and storing 
+                                        it, allowing the wielder to unleash significant bursts of power during short-
+                                        term engagements.<br>
+                                        <br>
+                                        Additionally, subjects selected to participate in field tests of the Armis 
+                                        products are those displaying rare genetic combinations and abnormalities, as 
+                                        it is the ultimate intent that the knowledge gained through Projects Medicus 
+                                        Albus and Armis Aucta Aether might be used to supplement the renewed aims of 
+                                        Project Resonant, providing a Magitek-based advantage which would set aether-
+                                        wielding Garleans clear above their Eorzean counterparts.<br>
+                                        <br>
+                                        While the project is ongoing, difficulty acquiring funding and obtaining 
+                                        the relevant training for its field agents, as well as being overshadowed 
+                                        by more urgent tasks, has significantly slowed progress.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="generic-container">
+                                <hr class="divider-l">
+                                <img class="divider-img" src="./images/garlemald_divider.png">
+                                <hr class="divider-r">
+                            </div>
+                            <div class="file-header-d">
+                                <div class="generic-list-b">
+                                    <div class="file-portrait-b">
+                                        <img src="./images/blueprint_aethershield.png">
+                                    </div>
+                                    <div class="generic-container-b" onclick="infoToggle(prjScu, prjScuArrow)">
+                                        <div class="tab-arrow" id="p-scu-tab-arrow"></div>
+                                        <div class="text-field-l-b">
+                                            <span class="style3">DETAILS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PROJECT</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Scutum Animae</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ROLE</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Director, Lead Researcher, Lead Engineer</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">CONTRIBUTION</span>
+                                            </div>
+                                        </td>
+                                        <td>   
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Aetherological theory, object analysis, 
+                                                    Magitek engineering, field experimentation
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">STATUS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Completed</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="project-info" id="p-scu-tab">
+                                <div class="text-field-para">
+                                    <p class="style4">
+                                        Following the decimation of the Garlean capital at the hands of an eikon, 
+                                        the continued threat of tempering proved a tremendous obstacle to those who 
+                                        sought both to investigate the incident and provide relief to the citizens 
+                                        and soldiers still active underground and within the outskirts.<br>
+                                        <br>
+                                        The Ilsabard Contingent of the Eorzean Alliance had arrived equipped with 
+                                        devices, called Warding Scales, which were capable of shielding the 
+                                        bearer from eikonic influence. Created by Hannish alchemists, these scales
+                                        were so named for having been crafted using the scales of a dragon. Aside 
+                                        from their inherent rarity, the complex alchemical techniques necessary for 
+                                        their creation would prove difficult to replicate outside of Thavnair.<br>
+                                        <br>
+                                        Project Scutum Animae was undertaken when one of these scales was recovered 
+                                        in the wake of an ambush, and through careful examination, formulation, 
+                                        and fabrication, functionally identical Magitek recreations of the technology 
+                                        were produced. Making use of an intricate and optimized combination of an 
+                                        aetherospectrometer, aetherotransformer, and aetheroprojector, the device 
+                                        is able to detect dangerous concentrations of aether and neutralize them 
+                                        in real time by producing oppositely-formulated energies. As this serves only 
+                                        to de-aspect incoming aether, however, it serves as a poor defense against 
+                                        traditional magick assaults and cannot protect the user from anything but 
+                                        tempering influences. Fueled by ceruleum, with a single-tank operating window 
+                                        approaching three suns under mid-high load, they provide a viable alternative 
+                                        which Garlean industrial technology could see manufactured and distributed.<br>
+                                        <br>
+                                        Though the prototype devices flourished during field testing, they proved 
+                                        irrelevant in the context of the Skyfall, and need for them diminished 
+                                        nigh entirely before mass-production could be considered. Nevertheless, the 
+                                        project is regarded as a total success and the technology remains available 
+                                        for ready use as needed. One lesser but still potent application noted is 
+                                        the potential to protect a user from ambient aetherpoisoning, as experienced 
+                                        at large battlefields and gravesites and within certain crystal fields.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="generic-container">
+                                <hr class="divider-l">
+                                <img class="divider-img" src="./images/garlemald_divider.png">
+                                <hr class="divider-r">
+                            </div>
+                            <div class="file-header-d">
+                                <div class="generic-list-b">
+                                    <div class="file-portrait-b">
+                                        <img src="./images/blueprint_tempering.png">
+                                    </div>
+                                    <div class="generic-container-b" onclick="infoToggle(prjIno, prjInoArrow)">
+                                        <div class="tab-arrow" id="p-ino-tab-arrow"></div>
+                                        <div class="text-field-l-b">
+                                            <span class="style3">DETAILS</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PROJECT</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Inoculationem</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">ROLE</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Director, Lead Researcher</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">CONTRIBUTION</span>
+                                            </div>
+                                        </td>
+                                        <td>   
+                                            <div class="text-field-para">
+                                                <span class="style4">
+                                                    Aetherological theory, data collection, 
+                                                    aetheric formulation
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr><td><span class="style3"><br></span></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">STATUS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">First-stage completion</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="project-info" id="p-ino-tab">
+                                <div class="text-field-para">
+                                    <p class="style4">
+                                        The most dangerous aspect of eikons beyond their raw destructive power has 
+                                        ever been tempering, the influence by which the very souls of its victims are 
+                                        twisted, imprinted, and molded to match the will of the performing eikon. It 
+                                        was an unfortunate reality that even the Allagan Empire, (as far as history 
+                                        knows,) could not overcome. Yet the emergence of the Eorzean Contingent's 
+                                        Warding Scales, and the success of Project Scutum Animae following, provided a 
+                                        new and heretofore unique opportunity to withstand the influence of an eikon 
+                                        without a need for the exceedingly rare gift of the Echo.<br>
+                                        <br>
+                                        In being able to approach an eikon without worry of being tempered, it has 
+                                        become possible to collect and catalogue the magnitude and composition of the 
+                                        selfsame aetheric influences responsible for tempering. While the data gathered 
+                                        would only be relevant to a singular summoning of a specific eikon, it would 
+                                        theoretically allow for the formulation of an equal and opposite aetheric 
+                                        influence, which would thereby allow one to reverse tempering in a subject and 
+                                        restore their soul towards a recoverable equilibrium.<br>
+                                        <br>
+                                        Project Inoculationem sought to do precisely this and found success in its 
+                                        flagship case, but before it could be applied widescale, the Eorzean Alliance 
+                                        unveiled and implemented a much more versatile tempering cure of its own. This 
+                                        method, however, utilizing a summoned demi-eikon, is believed to be inherently 
+                                        imprecise and therefore dangerous, as it is highly likely to merely be another 
+                                        manner of tempering which leaves the victim susceptible to the whims of the 
+                                        summoner responsible for their treatment. As the Inoculationem method is 
+                                        mathematically formulated from empirical data, it is in every way preferable. 
+                                        Most importantly, it may be enacted within any capable Garlean facility without 
+                                        the need to rely upon one who is both gifted in aether and familiar with the 
+                                        parent demi-eikon.<br>
+                                        <br>
+                                        Given the aforementioned shortcomings of the Eorzean method, the scope of the 
+                                        project has expanded with the aim to measure the influence of the demi-eikon so 
+                                        that any victims of its imperfect procedure may be restored correctly, with the 
+                                        ultimate goal being to restore all citizens of Garlemald accordingly. In tandem  
+                                        with this and Project Scutum Animae, Garlemald will be innoculated against 
+                                        suffering a repeated fate of the horrible destruction which shattered the seat 
+                                        of the Empire and brought catastrophic ruin to the capital city.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-field-c"><p class="style4"></p></div>
+                            <div class="text-field-c">
+                                <p class="style1">RESTRICTED</p>
+                            </div>
+                            <div class="file-header-c">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PROJECT</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Transcendentia</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">STATUS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Completed</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="generic-container">
+                                <hr class="divider-l">
+                                <img class="divider-img" src="./images/garlemald_divider.png">
+                                <hr class="divider-r">
+                            </div>
+                            <div class="file-header-c">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">PROJECT</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Rosa Alba</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-field-r">
+                                                <span class="style3">STATUS</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-field-para">
+                                                <span class="style4">Early formulation</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- REFERENCE -->
+                    <div class="info-frame" id="page-reference">
+                        <div class="scrollbar-box" id="reference-scroll" onscroll='changeuPos(refScroll);'>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <p class="style3">
+                                                DICASTERIUM DE PROGRESSIO<br>
+                                                MAGITECI ET AETHEROLOGIA
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <p class="style4">
+                                                The Department of Magitek Development and Aetherology (DPMA) is the 
+                                                research branch of the XIIth Legion, formed with the induction and 
+                                                appointment of its head, Aulus mal Asina, in service to the Legatus 
+                                                himself, Crown Prince Zenos yae Galvus, in pursuit of its flagship 
+                                                undertaking, Project Resonant.<br>
+                                                <br>
+                                                Despite Project Resonant being the primary purpose of the DPMA, 
+                                                many secondary projects were contributed both by mal Asina and his 
+                                                subordinates. Aside from advancements in hypertuning technology, mal 
+                                                Asina and his subordinates may claim credit for novel breakthroughs 
+                                                in synthetic Magitek forms, as seen in the widespread Roaders, 
+                                                renowned for their uncanny resemblance to organic flesh.<br>
+                                                <br>
+                                                The DPMA has operated in both the East and West, beneath Doma Castle 
+                                                and within Gyr Abania, where experimentation upon the local populations 
+                                                has caused a loss of life well into the thousands.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <p class="style3">
+                                                INTERIORI REVIDERE
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <p class="style4">
+                                                The Department of Interior Review, most commonly referred to as 
+                                                "Interior Review" (IR) is the manner of self-governance within the 
+                                                Legion which investigates all incidents, allegations, and suspicions 
+                                                of criminal or professional misconduct. While IR may sometimes 
+                                                cooperate with the Milites Stationarii, their primary concerns 
+                                                encompass the clerical functions of the Legion and its bureaucratic 
+                                                framework to also include the DPMA.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <p class="style3">
+                                                LABORATORIUM<br>
+                                                AETHEROLOGICUM
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <p class="style4">
+                                                The Aetherology Laboratory, most often referred to simply as "The 
+                                                Laboratorium," is a clandestine facility rumored to exist within the 
+                                                sublevels of the Garlean Consulate in Kugane. While such a place may 
+                                                theoretically trouble Garlean relations with the Hingan bakufu, the 
+                                                diplomatic rights afforded deny any unwelcome search of the premises. 
+                                                As a result, the best official response to any allegations must ever 
+                                                be "out of sight, out of mind."<br>
+                                                <br>
+                                                In full acknowledgement of this reality, Laboratorium personnel must 
+                                                exercise due caution to ensure that their activities remain plausibly 
+                                                benign, and the procurement of subjects for experimentation (if such 
+                                                ever occurs) must be carried out with incredible discretion.<br>
+                                                <br>
+                                                Yet, the existence of the Laboratorium itself remains largely an 
+                                                unsubstantiated rumor, as the brave few who have managed to enter the 
+                                                Consulate in search of it, even while having managed to identify a 
+                                                number of personnel suspected to work there, have never succeeded in 
+                                                locating it.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <p class="style3">
+                                                MILITES STATIONARII
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <p class="style4">
+                                                Stationed Soldiers refer to those assigned to the role of military 
+                                                police within the Legion. Though it is traditional for legionaries 
+                                                to be assigned as Stationarii only temporarily, often as a stepping 
+                                                stone early in their careers, they are assigned by specific station, 
+                                                and the stations themselves are fixtures as permanent as Garlean 
+                                                control over the associated territory.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <p class="style3">
+                                                SEGMENTUM ORIENTALE
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <p class="style4">
+                                                The Eastern Segment refers to the portion of the XIIth Legion which 
+                                                remained behind to oversee Doma and Yanxia while much of its might 
+                                                traveled west to stabilize the former XIVth Legion territories of Ala 
+                                                Mhigo and Gyr Abania.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="text-field-r">
+                                            <p class="style3">
+                                                VIRTUTE IN GLORIA
+                                            </p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-field-para">
+                                            <p class="style4">
+                                                A common phrase that has become the trademark of the XIIth Legion's 
+                                                Segmentum Orientale. Meaning "Virtue in Glory," it is an homage to 
+                                                the Legion's emphasis on martial excellence, the pursuit of power, 
+                                                and reverence for fierce-won victory.
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- DOCUMENTATION -->
+                    <div class="info-frame" id="page-documentation">
+                        <div class="scrollbar-box" id="gallery-scroll" onscroll="changeuPos(galScroll)">
+                            <div class="text-field-c">
+                                <p class="style1">OFFICIAL</p>
+                            </div>
+                            <div class="generic-gallery">
+                                <img src="./gallery/xiith_2.png" onclick='openFSImage("xiith_2")' onmouseenter='hoverAudio6()' draggable="false">
+                                <img src="./gallery/composed_2.png" onclick='openFSImage("composed_2")' onmouseenter='hoverAudio6()' draggable="false">
+                            </div>
+                            <div class="text-field-c"><p class="style4"></p></div>
+                            <div class="text-field-c">
+                                <p class="style1">UNOFFICIAL</p>
+                            </div>
+                            <div class="generic-gallery">
+                                <img src="./gallery/newlywed.png" onclick='openFSImage("newlywed")' onmouseenter='hoverAudio6()' draggable="false">
+                                <img src="./gallery/sunset.png" onclick='openFSImage("sunset")' onmouseenter='hoverAudio6()' draggable="false">
+                                <img src="./gallery/kor_2.png" onclick='openFSImage("kor_2")' onmouseenter='hoverAudio6()' draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Welcome panel and opening button -->
+            <div id="welcome-panel">
+                <div class="info-frame" id="welcome-frame">
+                    <style>
+                        #welcome-frame {
+                            visibility: visible;
+                            pointer-events: none;
+                        }
+                    </style>
+                    <div class="generic-list">
+                        <div class="text-field-c">
+                            <p class="style1">ACCESS NOTICE</p>
+                        </div>
+                        <div class="generic-container">
+                            <hr class="divider-l">
+                            <img class="divider-img" src="./images/garlemald_divider.png">
+                            <hr class="divider-r">
+                        </div>
+                        <div class="text-field-para">
+                            <p class="style4" id="welcome-text">
+                                Welcome to the personnel file for Noemi lux Herennius.<br>
+                                <br>
+                                Everything provided within is presented and curated from an IC
+                                lens, however, there are very few layers of artificial
+                                restriction limiting access to its contents.<br>
+                                <br>
+                                Please be sensible and conscientious when deciding how much 
+                                information should be personally available to your character.
+                            </p>
+                            <style>
+                                #welcome-text {
+                                    text-align: center;
+                                    padding-right: 16px;
+                                    padding-bottom: 4px;
+                                }
+                            </style>
+                        </div>
+                        <div class="welcome-button" onclick="pressMainButton()">Acknowledge and Proceed</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fullscreen Image Container -->
+            <div id="fullscreen-image" onclick="closeFSImage()"></div>
+        </div>
+        <!-- Background Script -->
+        <script src="script.js"></script>
+        <!-- Drop-down header with music, existing outside the bounds of the rest -->
+        <div id="music-dropdown-trigger-zone" onmouseenter="showMusic()" onmouseleave="hideMusic()">
+            <div id="music-dropdown">
+                <iframe width="100%" height="42" src="https://www.youtube.com/embed/EbftqekNkVY?version=3&loop=1&playlist=EbftqekNkVY">
+            </div>
+        </div>
+    </body>
+</html>

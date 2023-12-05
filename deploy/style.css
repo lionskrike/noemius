@@ -1,0 +1,642 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+#background-frame {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+#welcome-panel {
+    overflow: hidden;
+    position: absolute;
+    top: calc(50vh - 180px);
+    left: calc(50vw - 360px);
+    width: 720px;
+    height: 360px;
+    background-image: url("./images/welcome_frame.png");
+    background-size: cover;
+    animation: fadeInAnimation ease 2s;
+}
+#background-backing {
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/background_backing.png");
+    background-size: cover;
+    background-position: 50%;
+    visibility: hidden;
+    /* Animation is now fully handled in the JS */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    filter: brightness(0);
+}
+#background-layer-1, #background-layer-2, #background-layer-3 {
+    width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.1s ease-out;
+    display: block;
+    visibility: hidden;
+    /* Animation is now fully handled in the JS */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    filter: brightness(0);
+}
+@keyframes fadeInAnimation {
+    0% {
+        filter: brightness(0);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+.background-click{
+    position: absolute;
+    width: 25%;
+    top: 0px;
+    left: 0px;
+    transition: 0.1s ease-out;
+    overflow: hidden;
+/*    border: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 50%;*/
+}
+.background-click:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+#background-click-1 {
+    visibility: hidden;
+    border-color: purple;
+    transform: translate(195%, 5vh);
+}
+#background-click-2 {
+    visibility: hidden;
+    border-color: red;
+    transform: translate(130%, 35vh);
+}
+#background-click-3 {
+    visibility: hidden;
+    border-color: green;
+    transform: translate(220%, 40vh);
+}
+#page-frame {
+    position: relative;
+    top: -95%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    /* Animation is now fully handled in the JS */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+}
+@keyframes appearAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#navigate {
+    position: relative;
+    width: min-content;
+    height: 100%;
+    user-select: none;
+    pointer-events: auto;
+}
+#name-frame {
+    position: relative;
+    width: 80%;
+    top: -93%;
+    margin: auto;
+    text-align: center;
+}
+#name-title {
+    position: absolute;
+    top: 36%;
+}
+#garlemald {
+    position: relative;
+    width: 25%;
+    top: -80%;
+    content: url("./images/garlemald.png");
+    margin: auto;
+}
+#snake-panel {
+    position: relative;
+    width: 60%;
+    top: -91%;
+    margin: auto;
+    text-align: center;
+}
+#snake {
+    width: 100%;
+    content: url("./images/marinus.png");
+}
+#button-panel {
+    position: relative;
+    bottom: 87%;
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.button {
+    position: relative;
+    width: 70%;
+    height: 48px;
+    margin: auto;
+    cursor: pointer;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3rem;
+    padding-left: calc(0.3rem + 0.5rem);
+    font-size: 0.8em;
+    border-radius: 0.5rem;
+    box-shadow: -0.5rem 0rem 0rem 0rem #545454;
+    transition: color 0.25s ease, background-color 0.25s ease, background-image 0.25s ease border-color 0.25s ease;
+    background-color: transparent;
+    color: #FFFFFF;
+    background-image: linear-gradient(270deg, #333333 98%, #380000 0%);
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.button:hover {
+    background-color: #ff0000;
+    background-image: linear-gradient(270deg, #333333 50%, #941f1f 98%, transparent 0%);
+}
+.button:active {
+    background-color: #ffffff;
+    background-image: linear-gradient(270deg, #ffffff 2%, #333333 0%, #333333 50%, #bebebe 98%, transparent 0%);
+}
+.welcome-button {
+    position: relative;
+    width: 70%;
+    height: 48px;
+    margin: auto;
+    cursor: pointer;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3rem;
+    padding-left: calc(0.3rem + 0.5rem);
+    font-size: 0.8em;
+    border: solid;
+    border-width: 3px;
+    border-color: #333333;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+.welcome-button:hover {
+    color: #ff0000;
+    border-color: #545454;
+}
+.welcome-button:active {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+/* This invisible element is called by the JS to prevent the user from spamming buttons */
+#button-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+#investigate{
+    position: relative;
+    visibility: hidden;
+    height: 100%;
+    flex-grow: 1;
+    margin-left: 5%;
+    /* To implement growth from position, set top % and translateY % in equal opposite.
+    Higher is lower on the page. (i.e. 80%, -80%) */
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 0px solid transparent;
+    display: flex;
+    flex-direction: row;
+    /* Animation is now fully handled in the JS */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    pointer-events: auto;
+    user-select: none;
+}
+@keyframes growAnimation {
+    0% {
+        height: 0%;
+        flex-grow: 0;
+        outline: 2px solid white;
+        margin-left: -5%;
+    }
+    50% {
+        height: 0%;
+        flex-grow: 1;
+        outline: 2px solid white;
+        margin-left: 5%;
+    }
+    100% {
+        height: 100%;
+        flex-grow: 1;
+        outline: 0px solid transparent;
+        margin-left: 5%;
+    }
+}
+@keyframes shrinkAnimation {
+    0% {
+        height: 100%;
+        flex-grow: 1;
+        outline: 0px solid transparent;
+        margin-left: 5%;
+    }
+    50% {
+        height: 0%;
+        flex-grow: 1;
+        outline: 2px solid white;
+        margin-left: 5%;
+    }
+    100% {
+        height: 0%;
+        flex-grow: 0;
+        outline: 2px solid white;
+        margin-left: -5%;
+    }
+}
+.frame-static {
+    height: 100%;
+    width: min-content;
+}
+.frame-fill {
+    height: 100%;
+    width: max-content;
+    flex-grow: 1;
+    background-image: url("./images/frame_fill.png");
+    background-size: 100% 100%;
+}
+/* FONT HANDLING */
+.style1 {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.825rem;
+    width: calc(100% + 0.825rem);
+    font-size: 150%;
+    font-weight: 300;
+    line-height: 0;
+}
+.style2 {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.825rem;
+    width: calc(100% + 0.825rem);
+    font-size: 80%;
+    font-weight: 200;
+    line-height: 0;
+}
+.style3 {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.125rem;
+    width: calc(100% + 0.125rem);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.style4 {
+    text-align: left;
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.075rem;
+    width: calc(100% + 0.075rem);
+    font-size: 0.875em;
+    line-height: 1.5;
+    font-weight: 400;
+}
+/* MUSIC DROP-DOWN */
+#music-dropdown {
+    position: absolute;
+    width: calc(100% - 4px);
+    height: 42px;
+    top: -46px;
+}
+#music-dropdown-trigger-zone {
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    top: 0;
+}
+/* ALL PAGE CONTENT */
+.info-frame {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    height: 84%;
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    visibility: hidden;
+/*    outline: 2px solid white;*/
+}
+.file-header {
+    position: relative;
+    width: 100%;
+    min-height: 32vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+/*    outline: 2px solid white;*/
+}
+.file-header-b {
+    position: relative;
+    width: 100%;
+    min-height: 25%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+/*    outline: 2px solid white;*/
+}
+.file-header-c {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+/*    outline: 2px solid white;*/
+}
+.file-header-d {
+    position: relative;
+    width: 100%;
+    min-height: 30%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding-right: 16px;
+}
+.file-portrait {
+    height: 32vh;
+    width: min-content;
+/*    outline: 2px solid white;*/
+}
+.file-portrait-b {
+    height: 19vh;
+    width: min-content;
+}
+.text-field-l {
+    position: relative;
+    height: min-content;
+    width: max-content;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: start;
+    align-items: center;
+    padding-left: 16px;
+/*    outline: 2px solid green;*/
+}
+.text-field-l-b {
+    position: relative;
+    height: min-content;
+    width: max-content;
+    display: flex;
+    text-align: start;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translateY(0.5px)
+/*    outline: 2px solid green;*/
+}
+.text-field-para {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: start;
+    align-items: center;
+    padding-left: 16px;
+    overflow-wrap: break-word;
+/*    outline: 2px solid green;*/
+}
+.text-field-r {
+    position: relative;
+    height: min-content;
+    width: max-content;
+    display: flex;
+    flex-shrink: 0;
+    text-align: end;
+    align-items: center;
+    padding-left: 16px;
+    margin-left: auto;
+/*    outline: 2px solid green;*/
+}
+.text-field-c {
+    position: relative;
+    height: min-content;
+    width: max-content;
+    display: flex;
+    flex-shrink: 1;
+    text-align: center;
+    align-items: center;
+    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
+/*    outline: 2px solid green;*/
+}
+.scrollbar-box {
+    position: relative;
+    height: 100%;
+    width: calc(100% - 24) + "px";
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+/*    outline: 2px solid blue;*/
+}
+.generic-container {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+    overflow-wrap: break-word;
+    justify-content: space-around;
+/*    outline: 2px solid white;*/
+}
+.generic-list {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+/*    outline: 2px solid white;*/
+}
+.generic-list-b {
+    position: relative;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+}
+img {
+    pointer-events: none;
+}
+/* GALLERY */
+.generic-gallery {
+    position: relative;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.generic-gallery img {
+    width: 100%;
+    padding: 16px;
+    border-radius: 2.5vh;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.generic-gallery img:hover {
+    filter: brightness(1.2);
+}
+#fullscreen-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    visibility: hidden;
+    cursor: pointer;
+}
+/* DIVIDER AND CHARTS */
+.divider-l {
+    width: 40%;
+    margin-right: 0;
+    height: 0;
+    transform: translateY(7px);
+    border-color: #bebebe;
+}
+.divider-r {
+    width: 40%;
+    margin-left: 0;
+    height: 0;
+    transform: translateY(7px);
+    border-color: #bebebe;
+}
+.divider-img {
+    height: 16px;
+    user-select: none;
+    pointer-events: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+table {
+    border-collapse: collapse;
+    height: min-content;
+}
+td {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+}
+/* EXPANDING PROJECT INFO TABS */
+.tab-arrow {
+    width: 24px;
+    height: 24px;
+    background-image: url("./images/scroll_right.png");
+    /* set image to scroll_down in code*/
+    background-size: 24px;
+    background-repeat: no-repeat;
+}
+.project-info {
+    position: relative;
+    width: 100%;
+    height: 0;
+    transform: translateY(-8px);
+    /* set height to min-content in code*/
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    pointer-events: none;
+}
+.generic-container-b {
+    position: relative;
+    padding: 8px;
+    width: min-content;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: break-word;
+    cursor: pointer;
+    --isToggled: 0;
+}
+/* SPECIAL GARLEAN SCROLLBAR */
+:root {
+    --uPos: 0px;
+}
+.scrollbar-box::-webkit-scrollbar {
+    width: 24px;
+    background-clip: content-box;
+}
+.scrollbar-box::-webkit-scrollbar-thumb {
+    background-image: url("./images/scroll_box.png");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position-y: var(--uPos);
+    background-position-x: 0.5px;
+}
+.scrollbar-box::-webkit-scrollbar-button:single-button {
+    width: 24px;
+    height: 24px;
+}
+.scrollbar-box::-webkit-scrollbar-button:single-button:decrement {
+    background-image: url("./images/scroll_up.png");
+    background-size: 24px;
+    background-repeat: no-repeat;
+}
+.scrollbar-box::-webkit-scrollbar-button:single-button:increment {
+    background-image: url("./images/scroll_down.png");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position-y: -1px;
+}
