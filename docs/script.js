@@ -462,3 +462,65 @@ function closeFSImage() {
     imagePane.style.setProperty("visibility", "hidden");
     hoverAudio6()
 }
+
+/*
+* I stole this from online!
+* 
+* Calculates human age in years given a birth day. Optionally ageAtDate
+* can be provided to calculate age at a specific date
+*
+* @param string|Date Object birthDate
+* @param string|Date Object ageAtDate optional
+* @returns integer Age between birthday and a given date or today
+*/
+gregorianAge = function(birthDate, ageAtDate) {
+    // convert birthDate to date object if already not
+    if (Object.prototype.toString.call(birthDate) !== '[object Date]')
+      birthDate = new Date(birthDate);
+  
+    // use today's date if ageAtDate is not provided
+    if (typeof ageAtDate == "undefined")
+      ageAtDate = new Date();
+  
+    // convert ageAtDate to date object if already not
+    else if (Object.prototype.toString.call(ageAtDate) !== '[object Date]')
+      ageAtDate = new Date(ageAtDate);
+  
+    // if conversion to date object fails return null
+    if (ageAtDate == null || birthDate == null)
+      return null;
+  
+  
+    var _m = ageAtDate.getMonth() - birthDate.getMonth();
+  
+    // answer: ageAt year minus birth year less one (1) if month and day of ageAt year is before month and day of birth year
+    return (ageAtDate.getFullYear()) - birthDate.getFullYear()
+      - ((_m < 0 || (_m === 0 && ageAtDate.getDate() < birthDate.getDate()))?1:0)
+}
+
+document.getElementById("noeAge").innerHTML = gregorianAge("02 Feb 1996");
+document.getElementById("noeService").innerHTML = gregorianAge("02 Feb 2012");
+document.getElementById("noeMarks").innerHTML = gregorianAge("01 Jan 2014");
+document.getElementById("noeSpouse").innerHTML = "Herennius, Caeso (" + gregorianAge("28 Jul 1992") + ")";
+
+document.getElementById("glaucusAge").innerHTML = gregorianAge("23 Jun 1992");
+document.getElementById("cassiusAge").innerHTML = gregorianAge("24 Feb 2000");
+document.getElementById("rennAge").innerHTML = gregorianAge("25 Mar 2002");
+document.getElementById("iunoAge").innerHTML = gregorianAge("05 Jun 2000");
+document.getElementById("nasrineAge").innerHTML = gregorianAge("01 Jan 1994");
+document.getElementById("izunaAge").innerHTML = gregorianAge("21 Apr 1998");
+document.getElementById("saegythAge").innerHTML = gregorianAge("23 Nov 1997");
+
+let currentDate = new Date();
+let comillaDate = new Date("03 Mar 2024");
+let brutcasDate = new Date("12 May 2027");
+let flaeniaDate = new Date("21 Jul 2032");
+
+if (currentDate >= flaeniaDate)
+    document.getElementById("childList").innerHTML = "Herennius, Comilla (" + gregorianAge(comillaDate) + ")<br>Herennius, Brutus (" + gregorianAge(brutcasDate) + ")<br>Herennius, Cassius (" + gregorianAge(brutcasDate) + ")<br>Herennius, Flaenia (" + gregorianAge(flaeniaDate) + ")";
+else if (currentDate >= brutcasDate)
+    document.getElementById("childList").innerHTML = "Herennius, Comilla (" + gregorianAge(comillaDate) + ")<br>Herennius, Brutus (" + gregorianAge(brutcasDate) + ")<br>Herennius, Cassius (" + gregorianAge(brutcasDate) + ")";
+else if (currentDate >= comillaDate)
+    document.getElementById("childList").innerHTML = "Herennius, Comilla (" + gregorianAge(comillaDate) + ")";
+else
+    document.getElementById("childList").innerHTML = "None";
